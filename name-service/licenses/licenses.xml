@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <licenseSummary>
-    <project>nodejs-circuit-breaker-redhat-name</project>
-    <version>1.1.0</version>
+    <project>nodejs-cache-name</project>
+    <version>1.0.0</version>
     <license>Apache-2.0</license>
     <dependencies>
         <dependency>
@@ -37,6 +37,26 @@
         <dependency>
             <packageName>license-reporter</packageName>
             <version>1.1.3</version>
+            <licenses>
+                <license>
+                    <name>Apache License 2.0</name>
+                    <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <packageName>project-name-generator</packageName>
+            <version>2.1.4</version>
+            <licenses>
+                <license>
+                    <name>ISC License</name>
+                    <url>http://www.isc.org/software/license</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <packageName>roi</packageName>
+            <version>0.18.0</version>
             <licenses>
                 <license>
                     <name>Apache License 2.0</name>

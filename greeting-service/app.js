@@ -21,14 +21,17 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const probe = require('kube-probe');
 
 const app = express();
+// adds basic health-check endpoints
+probe(app);
 
 const nameService = require('./lib/name-service-client');
 const nameServiceHost = process.env.NAME_SERVICE_HOST || 'http://nodejs-cache-name:8080';
 
 const infinispan = require('infinispan');
-const infinispanConnection = infinispan.client({port: 11222, host: '127.0.0.1'});
+const infinispanConnection = infinispan.client({port: 11222, host: 'cache-server'});
 const cacheKey = 'cute-name';
 
 app.use(bodyParser.json());
