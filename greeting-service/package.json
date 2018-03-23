@@ -1,0 +1,58 @@
+{
+  "name": "nodejs-cache-greeting",
+  "version": "1.0.0",
+  "author": "Red Hat, Inc.",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "tape test/*.js | tap-spec",
+    "lint": "eslint test/*.js app.js bin/* lib/*.js",
+    "prepare": "echo 'To confirm CVE compliance, run \"npm run security-check\"' ",
+    "security-check": "nsp check",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "dependencyCheck": "szero . --ci",
+    "start": "PORT=8080 node ./bin/www",
+    "prepublish": "license-reporter report",
+    "openshift": "nodeshift --strictSSL=false --nodeVersion=8.x",
+    "postinstall": "license-reporter report && license-reporter save --xml licenses.xml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bucharest-gold/nodejs-cache.git"
+  },
+  "files": [
+    "package.json",
+    "LICENSE",
+    "bin",
+    "lib",
+    "public",
+    "app.js",
+    "licenses"
+  ],
+  "bugs": {
+    "url": "https://github.com/bucharest-gold/nodejs-cache/issues"
+  },
+  "homepage": "https://github.com/bucharest-gold/nodejs-cache",
+  "devDependencies": {
+    "eslint": "~3.8.1",
+    "eslint-config-semistandard": "~7.0.0",
+    "eslint-config-standard": "~6.2.0",
+    "eslint-plugin-promise": "~3.3.0",
+    "eslint-plugin-react": "~6.4.1",
+    "eslint-plugin-standard": "~2.0.1",
+    "istanbul": "~0.4.5",
+    "nodeshift": "~1.6.0",
+    "nsp": "~2.6.2",
+    "nyc": "~11.0.3",
+    "szero": "^0.7.1",
+    "tap-spec": "~4.1.1",
+    "tape": "~4.6.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.0",
+    "infinispan": "~0.4.0",
+    "kube-probe": "~0.1.2",
+    "license-reporter": "^1.1.3"
+  }
+}
