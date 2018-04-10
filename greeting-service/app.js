@@ -28,7 +28,7 @@ const app = express();
 probe(app);
 
 const nameService = require('./lib/name-service-client');
-const nameServiceHost = process.env.NAME_SERVICE_HOST || 'http://nodejs-cache-name:8080';
+const nameServiceHost = process.env.NAME_SERVICE_HOST || 'http://nodejs-cache-cute-name:8080';
 
 const infinispan = require('infinispan');
 

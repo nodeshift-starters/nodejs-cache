@@ -17,10 +17,10 @@ npm install
 echo "Deploying greeting service"
 npm run openshift
 
-cd ../name-service
-echo "Building name service"
+cd ../cute-name-service
+echo "Building cute name service"
 npm install
-echo "Deploying name service"
+echo "Deploying cute name service"
 npm run openshift
 
 cd ..
