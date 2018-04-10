@@ -31,7 +31,13 @@ const nameService = require('./lib/name-service-client');
 const nameServiceHost = process.env.NAME_SERVICE_HOST || 'http://nodejs-cache-name:8080';
 
 const infinispan = require('infinispan');
-const infinispanConnection = infinispan.client({port: 11222, host: 'cache-server'});
+
+const cacheClientOptions = {
+  port: process.env.CACHE_PORT || 11222,
+  host: process.env.CACHE_HOST || 'cache-server'
+};
+
+const infinispanConnection = infinispan.client(cacheClientOptions);
 const cacheKey = 'cute-name';
 
 app.use(bodyParser.json());

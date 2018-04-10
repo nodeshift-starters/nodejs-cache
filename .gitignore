@@ -3,3 +3,4 @@ node_modules
 *.pid
 tmp
 nodeshift-metadata.json
+*.log
