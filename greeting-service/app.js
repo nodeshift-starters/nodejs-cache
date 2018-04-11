@@ -17,20 +17,19 @@
  *  limitations under the License.
  *
  */
+const path = require('path');
 
 const express = require('express');
-const path = require('path');
 const bodyParser = require('body-parser');
 const probe = require('kube-probe');
+const infinispan = require('infinispan');
+const nameService = require('./lib/name-service-client');
 
 const app = express();
-// adds basic health-check endpoints
+// Adds basic health-check endpoints
 probe(app);
 
-const nameService = require('./lib/name-service-client');
 const nameServiceHost = process.env.NAME_SERVICE_HOST || 'http://nodejs-cache-cute-name:8080';
-
-const infinispan = require('infinispan');
 
 const cacheClientOptions = {
   port: process.env.CACHE_PORT || 11222,
@@ -41,9 +40,9 @@ const infinispanConnection = infinispan.client(cacheClientOptions);
 const cacheKey = 'cute-name';
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', express.static(path.join(__dirname, 'public')));
-// expose the license.html at http[s]://[host]:[port]/licences/licenses.html
+// Expose the license.html at http[s]://[host]:[port]/licences/licenses.html
 app.use('/licenses', express.static(path.join(__dirname, 'licenses')));
 
 async function getCached (client) {
@@ -66,19 +65,19 @@ app.use('/api/greeting', async (request, response) => {
   }
 });
 
-// get the status of the cache
+// Get the status of the cache
 app.get('/api/cached', async (request, response) => {
   try {
     const client = await infinispanConnection;
     const cache = await getCached(client);
-    return response.send({cached: cache ? true : false});
+    return response.send({cached: cache});
   } catch (err) {
     response.status(400);
     response.send(err);
   }
 });
 
-// clear the cachce
+// Clear the cachce
 app.delete('/api/cached', async (request, response) => {
   try {
     const client = await infinispanConnection;

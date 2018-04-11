@@ -17,36 +17,37 @@
  */
 'use strict';
 
-const express = require('express');
 const path = require('path');
 const {promisify} = require('util');
+
+const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const generator = require('project-name-generator');
-
 const probe = require('kube-probe');
+
 const app = express();
 
 const setTmeoutPromise = promisify(setTimeout);
 
-// adds basic health-check endpoints
+// Adds basic health-check endpoints
 probe(app);
 
-// send and receive json
+// Send and receive json
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // CORS support
 app.use(cors());
 
-// name service API
+// Name service API
 app.get('/api/name', async (request, response) => {
   // Simulate a long response
   await setTmeoutPromise(2000);
   response.send(generator().spaced);
 });
 
-// expose the license.html at http[s]://[host]:[port]/licences/licenses.html
+// Expose the license.html at http[s]://[host]:[port]/licences/licenses.html
 app.use('/licenses', express.static(path.join(__dirname, 'licenses')));
 
 module.exports = app;
