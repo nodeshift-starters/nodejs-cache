@@ -82,7 +82,7 @@ app.delete('/api/cached', async (request, response) => {
   try {
     const client = await infinispanConnection;
     await client.remove(cacheKey);
-    return response.send(204);
+    return response.sendStatus(204);
   } catch (err) {
     response.status(400);
     response.send(err);
