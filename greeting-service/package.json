@@ -43,20 +43,20 @@
   },
   "homepage": "https://github.com/bucharest-gold/nodejs-cache",
   "devDependencies": {
-    "nodeshift": "~1.6.0",
-    "nsp": "~2.6.2",
-    "nyc": "~11.0.3",
-    "szero": "^0.7.1",
+    "nodeshift": "~1.7.1",
+    "nsp": "~3.2.1",
+    "nyc": "~11.6.0",
+    "szero": "~1.0.0",
     "tap-spec": "~4.1.1",
-    "tape": "~4.6.2",
+    "tape": "~4.9.0",
     "xo": "~0.20.3"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.0",
+    "body-parser": "~1.18.2",
+    "express": "~4.16.3",
     "infinispan": "~0.4.0",
-    "kube-probe": "~0.1.2",
-    "license-reporter": "^1.1.3",
+    "kube-probe": "~0.3.1",
+    "license-reporter": "~1.2.0",
     "roi": "~0.18.0"
   }
 }
