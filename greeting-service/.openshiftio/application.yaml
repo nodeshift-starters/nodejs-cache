@@ -92,7 +92,7 @@ objects:
       provider: nodeshift
       expose: 'true'
       project: nodejs-cache-greeting
-      version: 1.1.0
+      version: 1.0.0
 - apiVersion: v1
   kind: DeploymentConfig
   metadata:
@@ -101,7 +101,7 @@ objects:
       app: nodejs-cache-greeting
       provider: nodeshift
       project: nodejs-cache-greeting
-      version: 1.1.0
+      version: 1.0.0
   spec:
     template:
       spec:
@@ -131,7 +131,7 @@ objects:
           app: nodejs-cache-greeting
           project: nodejs-cache-greeting
           provider: nodeshift
-          version: 1.1.0
+          version: 1.0.0
     replicas: 1
     selector:
       app: nodejs-cache-greeting
@@ -160,4 +160,4 @@ objects:
     labels:
       provider: nodeshift
       project: nodejs-cache-greeting
-      version: 1.1.0
+      version: 1.0.0
