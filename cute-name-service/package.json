@@ -34,7 +34,6 @@
     "package.json",
     "LICENSE",
     "app.js",
-    "lib",
     "bin",
     "licenses"
   ],
