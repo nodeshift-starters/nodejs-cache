@@ -12,11 +12,12 @@
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "ci": "npm run lint && npm run test",
     "dependencyCheck": "szero . --ci",
-    "start": "PORT=8080 node ./bin/www",
+    "start": "node .",
     "prepublish": "license-reporter report",
     "openshift": "nodeshift --strictSSL=false --nodeVersion=8.x",
     "postinstall": "license-reporter report && license-reporter save --xml licenses.xml"
   },
+  "main": "./bin/www",
   "xo": {
     "space": 2,
     "rules": {

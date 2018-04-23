@@ -1,7 +1,6 @@
 {
   "name": "nodejs-cache-cute-name",
   "version": "1.0.0",
-  "main": "false",
   "author": "Red Hat, Inc.",
   "license": "Apache-2.0",
   "scripts": {
@@ -15,8 +14,9 @@
     "prepublish": "license-reporter report",
     "openshift": "nodeshift --strictSSL=false --nodeVersion=8.x",
     "postinstall": "license-reporter report && license-reporter save --xml licenses.xml",
-    "start": "PORT=8080 node ./bin/www"
+    "start": "node ."
   },
+  "main": "./bin/www",
   "xo": {
     "space": 2,
     "rules": {
