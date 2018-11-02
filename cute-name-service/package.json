@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bucharest-gold/nodejs-cache.git"
+    "url": "git://github.com/nodeshift-starters/nodejs-cache.git"
   },
   "files": [
     "package.json",
@@ -38,9 +38,9 @@
     "licenses"
   ],
   "bugs": {
-    "url": "https://github.com/bucharest-gold/nodejs-cache/issues"
+    "url": "https://github.com/nodeshift-starters/nodejs-cache/issues"
   },
-  "homepage": "https://github.com/bucharest-gold/nodejs-cache",
+  "homepage": "https://github.com/nodeshift-starters/nodejs-cache",
   "devDependencies": {
     "nodeshift": "~1.7.1",
     "nsp": "~3.2.1",
