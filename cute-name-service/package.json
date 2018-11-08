@@ -42,9 +42,9 @@
   },
   "homepage": "https://github.com/nodeshift-starters/nodejs-cache",
   "devDependencies": {
-    "nodeshift": "~1.7.1",
+    "nodeshift": "~2.0.0",
     "nsp": "~3.2.1",
-    "nyc": "~11.6.0",
+    "nyc": "~13.1.0",
     "proxyquire": "~2.0.1",
     "supertest": "~3.0.0",
     "szero": "~1.0.0",
