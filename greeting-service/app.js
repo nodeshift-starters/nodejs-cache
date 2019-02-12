@@ -58,10 +58,11 @@ app.use('/api/greeting', async (request, response) => {
       client.put(cacheKey, projectName, {lifespan: '5s'});
       return response.send({message: projectName});
     }
+
     return response.send({message: cached});
-  } catch (err) {
+  } catch (error) {
     response.status(400);
-    return response.send(err);
+    return response.send(error);
   }
 });
 
@@ -71,9 +72,9 @@ app.get('/api/cached', async (request, response) => {
     const client = await infinispanConnection;
     const cache = await getCached(client);
     return response.send({cached: cache});
-  } catch (err) {
+  } catch (error) {
     response.status(400);
-    response.send(err);
+    response.send(error);
   }
 });
 
@@ -83,9 +84,9 @@ app.delete('/api/cached', async (request, response) => {
     const client = await infinispanConnection;
     await client.remove(cacheKey);
     return response.sendStatus(204);
-  } catch (err) {
+  } catch (error) {
     response.status(400);
-    response.send(err);
+    response.send(error);
   }
 });
 
