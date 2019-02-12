@@ -40,14 +40,14 @@
   },
   "homepage": "https://github.com/nodeshift-starters/nodejs-cache",
   "devDependencies": {
-    "nodeshift": "~2.0.0",
-    "nyc": "~13.1.0",
-    "proxyquire": "~2.0.1",
-    "supertest": "~3.0.0",
+    "nodeshift": "~2.1.1",
+    "nyc": "~13.2.0",
+    "proxyquire": "~2.1.0",
+    "supertest": "~3.4.2",
     "szero": "~1.0.0",
     "tap-spec": "~5.0.0",
-    "tape": "~4.9.0",
-    "xo": "~0.20.3"
+    "tape": "~4.10.0",
+    "xo": "~0.24.0"
   },
   "description": "",
   "keywords": [],
