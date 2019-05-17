@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "body-parser": "~1.19.0",
-    "express": "~4.16.3",
+    "express": "~4.17.0",
     "infinispan": "~0.6.0",
     "kube-probe": "~0.3.1",
     "license-reporter": "~1.2.0",
