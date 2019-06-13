@@ -9,7 +9,6 @@
     "coverage": "nyc npm test",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "ci": "npm run lint && npm run test",
-    "dependencyCheck": "szero . --ci",
     "start": "node .",
     "prepublish": "license-reporter report",
     "openshift": "nodeshift --strictSSL=false --imageTag=8.x",
@@ -47,7 +46,6 @@
     "nyc": "~14.1.0",
     "proxyquire": "~2.1.0",
     "supertest": "~4.0.0",
-    "szero": "~1.0.0",
     "tap-spec": "~5.0.0",
     "tape": "~4.10.0",
     "xo": "~0.24.0"
