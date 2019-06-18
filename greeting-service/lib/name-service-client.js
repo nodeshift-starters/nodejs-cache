@@ -16,17 +16,16 @@
  *
  */
 'use strict';
-const roi = require('roi');
+const axios = require('axios');
 
 function nameService (endpoint) {
   return new Promise((resolve, reject) => {
-    roi.get({endpoint})
+    axios.get(endpoint)
       .then(response => {
-        if (response.statusCode !== 200) {
+        if (response.status !== 200) {
           return reject();
         }
-
-        return resolve(response.body);
+        resolve(response.data);
       })
       .catch(reject);
   });
