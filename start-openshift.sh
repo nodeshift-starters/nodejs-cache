@@ -24,4 +24,9 @@ echo "Deploying cute name service"
 npm run openshift
 
 cd ..
-open http://`oc get route nodejs-cache-greeting | tail -1 | cut -d ' ' -f 4`
+
+case "$OSTYPE" in
+  darwin*)  open http://`oc get route nodejs-cache-greeting | tail -1 | cut -d ' ' -f 4` ;;
+  linux*)   xdg-open http://`oc get route nodejs-cache-greeting | tail -1 | cut -d ' ' -f 4` ;;
+  *)        echo "unknown: $OSTYPE" ;;
+esac
