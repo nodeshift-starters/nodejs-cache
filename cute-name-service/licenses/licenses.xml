@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <licenseSummary>
     <project>nodejs-cache-cute-name</project>
-    <version>3.0.0</version>
+    <version>3.1.0</version>
     <license>Apache-2.0</license>
     <dependencies>
         <dependency>
@@ -26,11 +26,21 @@
         </dependency>
         <dependency>
             <packageName>kube-probe</packageName>
-            <version>0.3.1</version>
+            <version>0.3.2</version>
             <licenses>
                 <license>
                     <name>Apache License 2.0</name>
                     <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
+            <packageName>project-name-generator</packageName>
+            <version>2.1.7</version>
+            <licenses>
+                <license>
+                    <name>ISC License</name>
+                    <url>http://www.isc.org/software/license</url>
                 </license>
             </licenses>
         </dependency>
