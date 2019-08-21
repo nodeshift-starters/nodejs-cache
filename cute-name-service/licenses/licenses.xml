@@ -35,6 +35,16 @@
             </licenses>
         </dependency>
         <dependency>
+            <packageName>license-reporter</packageName>
+            <version>1.2.2</version>
+            <licenses>
+                <license>
+                    <name>Apache License 2.0</name>
+                    <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+                </license>
+            </licenses>
+        </dependency>
+        <dependency>
             <packageName>project-name-generator</packageName>
             <version>2.1.7</version>
             <licenses>
