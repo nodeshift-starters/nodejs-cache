@@ -10,9 +10,9 @@
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "ci": "npm run lint && npm run test",
     "start": "node .",
-    "prepublish": "license-reporter report",
+    "prepublish": "license-reporter report --silent",
     "openshift": "nodeshift --strictSSL=false --imageTag=10.x",
-    "postinstall": "license-reporter report && license-reporter save --xml licenses.xml"
+    "postinstall": "license-reporter report --silent && license-reporter save --xml licenses.xml --silent"
   },
   "main": "./bin/www",
   "xo": {

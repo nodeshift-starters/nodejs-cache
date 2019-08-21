@@ -8,9 +8,9 @@
     "lint": "xo",
     "coverage": "istanbul cover tape test/*.js",
     "ci": "npm run lint && npm run test",
-    "prepublish": "license-reporter report",
+    "prepublish": "license-reporter report --silent",
     "openshift": "nodeshift --strictSSL=false --imageTag=10.x",
-    "postinstall": "license-reporter report && license-reporter save --xml licenses.xml",
+    "postinstall": "license-reporter report --silent && license-reporter save --xml licenses.xml --silent",
     "start": "node ."
   },
   "main": "./bin/www",
