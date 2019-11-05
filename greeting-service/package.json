@@ -11,7 +11,7 @@
     "ci": "npm run lint && npm run test",
     "start": "node .",
     "prepublish": "license-reporter report --silent",
-    "openshift": "nodeshift --strictSSL=false --imageTag=10.x",
+    "openshift": "nodeshift",
     "postinstall": "license-reporter report --silent && license-reporter save --xml licenses.xml --silent"
   },
   "main": "./bin/www",
