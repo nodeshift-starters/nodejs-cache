@@ -1,5 +1,5 @@
-apiVersion: route.openshift.io/v1
-  kind: Route
+apiVersion: template.openshift.io/v1
+kind: Template
 metadata:
   name: launchpad-builder
   annotations:
@@ -28,11 +28,13 @@ parameters:
   generate: expression
 objects:
 - apiVersion: image.openshift.io/v1
-  kind: ImageStream  metadata:
+  kind: ImageStream
+  metadata:
     name: nodejs-cache-cute-name
   spec: {}
 - apiVersion: image.openshift.io/v1
-  kind: ImageStream  metadata:
+  kind: ImageStream
+  metadata:
     name: runtime
   spec:
     tags:
