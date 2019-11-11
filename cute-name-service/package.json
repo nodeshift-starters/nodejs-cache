@@ -9,7 +9,7 @@
     "coverage": "istanbul cover tape test/*.js",
     "ci": "npm run lint && npm run test",
     "prepublish": "license-reporter report --silent",
-    "openshift": "nodeshift --strictSSL=false --imageTag=12.x",
+    "openshift": "nodeshift --strictSSL=false --dockerImage=registry.access.redhat.com/ubi8/nodejs-12",
     "postinstall": "license-reporter report --silent && license-reporter save --xml licenses.xml --silent",
     "start": "node ."
   },
