@@ -11,7 +11,7 @@
     "ci": "npm run lint && npm run test",
     "start": "node .",
     "prepublish": "license-reporter report --silent",
-    "openshift": "nodeshift --strictSSL=false --dockerImage=registry.access.redhat.com/ubi8/nodejs-12",
+    "openshift": "nodeshift --dockerImage=registry.access.redhat.com/ubi8/nodejs-12",
     "postinstall": "license-reporter report --silent && license-reporter save --xml licenses.xml --silent"
   },
   "main": "./bin/www",
