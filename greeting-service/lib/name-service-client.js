@@ -25,6 +25,7 @@ function nameService (endpoint) {
         if (response.status !== 200) {
           return reject();
         }
+
         resolve(response.data);
       })
       .catch(reject);
