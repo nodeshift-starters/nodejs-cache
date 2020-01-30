@@ -54,7 +54,7 @@
     "axios": "^0.19.0",
     "body-parser": "~1.19.0",
     "express": "~4.17.1",
-    "infinispan": "~0.6.0",
+    "infinispan": "~0.7.0",
     "kube-probe": "~0.3.2",
     "license-reporter": "~1.2.2"
   }
