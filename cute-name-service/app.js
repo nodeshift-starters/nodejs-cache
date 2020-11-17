@@ -18,7 +18,7 @@
 'use strict';
 
 const path = require('path');
-const {promisify} = require('util');
+const { promisify } = require('util');
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -35,7 +35,7 @@ probe(app);
 
 // Send and receive json
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // CORS support
 app.use(cors());

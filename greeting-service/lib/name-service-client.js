@@ -23,7 +23,7 @@ function nameService (endpoint) {
     axios.get(endpoint)
       .then(response => {
         if (response.status !== 200) {
-          return reject();
+          return reject(new Error(`Expected status code 200, instead got ${response.status}`));
         }
 
         resolve(response.data);

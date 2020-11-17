@@ -40,7 +40,7 @@ const infinispanConnection = infinispan.client(cacheClientOptions);
 const cacheKey = 'cute-name';
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', express.static(path.join(__dirname, 'public')));
 // Expose the license.html at http[s]://[host]:[port]/licences/licenses.html
 app.use('/licenses', express.static(path.join(__dirname, 'licenses')));
@@ -55,11 +55,11 @@ app.use('/api/greeting', async (request, response) => {
     const cached = await getCached(client);
     if (!cached) {
       const projectName = await nameService(`${nameServiceHost}/api/name`);
-      client.put(cacheKey, projectName, {lifespan: '5s'});
-      return response.send({message: projectName});
+      client.put(cacheKey, projectName, { lifespan: '5s' });
+      return response.send({ message: projectName });
     }
 
-    return response.send({message: cached});
+    return response.send({ message: cached });
   } catch (error) {
     response.status(400);
     return response.send(error);
@@ -71,7 +71,7 @@ app.get('/api/cached', async (request, response) => {
   try {
     const client = await infinispanConnection;
     const cache = await getCached(client);
-    return response.send({cached: cache});
+    return response.send({ cached: cache });
   } catch (error) {
     response.status(400);
     response.send(error);
