@@ -26,7 +26,7 @@
         </dependency>
         <dependency>
             <packageName>kube-probe</packageName>
-            <version>0.5.0</version>
+            <version>1.0.2</version>
             <licenses>
                 <license>
                     <name>Apache License 2.0</name>
@@ -41,16 +41,6 @@
                 <license>
                     <name>Apache License 2.0</name>
                     <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-                </license>
-            </licenses>
-        </dependency>
-        <dependency>
-            <packageName>project-name-generator</packageName>
-            <version>2.1.7</version>
-            <licenses>
-                <license>
-                    <name>ISC License</name>
-                    <url>http://www.isc.org/software/license</url>
                 </license>
             </licenses>
         </dependency>

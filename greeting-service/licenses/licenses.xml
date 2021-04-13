@@ -6,7 +6,7 @@
     <dependencies>
         <dependency>
             <packageName>axios</packageName>
-            <version>0.19.2</version>
+            <version>0.21.1</version>
             <licenses>
                 <license>
                     <name>MIT License</name>
@@ -36,7 +36,7 @@
         </dependency>
         <dependency>
             <packageName>infinispan</packageName>
-            <version>0.6.0</version>
+            <version>0.7.0</version>
             <licenses>
                 <license>
                     <name>Apache License 2.0</name>
@@ -46,7 +46,7 @@
         </dependency>
         <dependency>
             <packageName>kube-probe</packageName>
-            <version>0.5.0</version>
+            <version>1.0.2</version>
             <licenses>
                 <license>
                     <name>Apache License 2.0</name>
