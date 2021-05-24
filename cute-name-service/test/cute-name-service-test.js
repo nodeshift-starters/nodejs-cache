@@ -1,26 +1,25 @@
+/* eslint-disable no-undef */
 'use strict';
 
-const test = require('tape');
+const assert = require('assert');
 const proxyquire = require('proxyquire');
 const supertest = require('supertest');
 
-test('cute-name-service test', t => {
-  const app = proxyquire('../app', {
-    'project-name-generator': () => {
-      return {
-        spaced: 'cute-name'
-      };
-    }
-  });
-
-  supertest(app)
-    .get('/api/name')
-    .expect('Content-Type', /html/)
-    .expect(200)
-    .then(response => {
-      t.equal(response.text, 'cute-name', 'shold have a cute name response');
-    })
-    .then(() => {
-      t.end();
+describe('Cute-name service', () => {
+  it('should have cute name response', async function () {
+    this.timeout(0);
+    const app = proxyquire('../app', {
+      'project-name-generator': () => {
+        return {
+          spaced: 'cute-name'
+        };
+      }
     });
+    const response = await supertest(app)
+      .get('/api/name')
+      .expect('Content-Type', /html/)
+      .expect(200);
+
+    assert.strictEqual(response.text, 'cute-name');
+  });
 });
