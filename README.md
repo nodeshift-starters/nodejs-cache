@@ -8,7 +8,7 @@ can create one with `oc apply -f service.cache.yml`.
 ## Running The Example
 
 You can run this example as node processes on your localhost, as pods on a local
-[minishift](https://github.com/minishift/minishift/releases) installation.
+[code-ready-containers](https://developers.redhat.com/products/codeready-containers/overview) installation.
 
 ### Localhost
 
@@ -18,13 +18,14 @@ To run the application on your local machine, just run the command bellow:
 $ ./start-local.sh
 ```
 
-### Minishift
+### CodeReady Containers
 
-Minishift should be started, and you should be logged in with a currently
+CRC should be started, and you should be logged in with a currently
 active project. Then run the `start-openshift.sh` command.
 
 ```sh
-$ minishift start # You may have some options here, e.g. --memory=8096 --vm-driver=virtualbox
+$ crc setup # Set-up the hypervisor
+$ crc start # Initialize the openshift cluster
 $ oc login -u developer # Login
 $ oc new-project my-example-project # Create a project to deploy to
 $ ./start-openshift.sh
