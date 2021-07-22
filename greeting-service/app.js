@@ -21,13 +21,19 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const probe = require('kube-probe');
 const infinispan = require('infinispan');
 const nameService = require('./lib/name-service-client');
 
 const app = express();
-// Adds basic health-check endpoints
-probe(app);
+
+// Add basic health check endpoints
+app.use('/ready', (request, response) => {
+  return response.sendStatus(200);
+});
+
+app.use('/live', (request, response) => {
+  return response.sendStatus(200);
+});
 
 const nameServiceHost = process.env.NAME_SERVICE_HOST || 'http://nodejs-cache-cute-name:8080';
 
