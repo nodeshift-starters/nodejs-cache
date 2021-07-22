@@ -24,14 +24,19 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const generator = require('project-name-generator');
-const probe = require('kube-probe');
 
 const app = express();
 
 const setTmeoutPromise = promisify(setTimeout);
 
-// Adds basic health-check endpoints
-probe(app);
+// Add basic health-check endpoints
+app.use('/ready', (request, response) => {
+  return response.sendStatus(200);
+});
+
+app.use('/live', (request, response) => {
+  return response.sendStatus(200);
+});
 
 // Send and receive json
 app.use(bodyParser.json());
