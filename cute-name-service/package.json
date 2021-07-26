@@ -7,8 +7,6 @@
     "pretest": "eslint --ignore-path ../.gitignore .",
     "test": "mocha",
     "lint:fix": "eslint . --fix",
-    "coverage": "istanbul cover mocha test/*.js",
-    "ci": "npm run test",
     "prepublish": "license-reporter report --silent",
     "openshift": "nodeshift --dockerImage=registry.access.redhat.com/ubi8/nodejs-14:latest",
     "postinstall": "license-reporter report --silent && license-reporter save --xml licenses.xml --silent",
