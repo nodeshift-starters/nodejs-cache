@@ -1,13 +1,15 @@
 apiVersion: v1
 kind: List
 items:
-  - apiVersion: extensions/v1beta1
-    kind: Deployment
+  - apiVersion: v1
+    kind: DeploymentConfig
     metadata:
       name: cache-server
       labels:
         app: cache-server
     spec:
+      selector:
+        app: cache-server
       replicas: 1
       strategy:
         type: Recreate

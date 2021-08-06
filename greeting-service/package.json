@@ -9,7 +9,7 @@
     "lint:fix": "eslint . --fix",
     "start": "node .",
     "prepublish": "license-reporter report --silent",
-    "openshift": "registry.access.redhat.com/ubi8/nodejs-14:latest",
+    "openshift": "nodeshift --dockerImage=registry.access.redhat.com/ubi8/nodejs-14",
     "postinstall": "license-reporter report --silent && license-reporter save --xml licenses.xml --silent"
   },
   "main": "./bin/www",
