@@ -7,9 +7,7 @@
     "pretest": "eslint --ignore-path ../.gitignore .",
     "test": "mocha",
     "lint:fix": "eslint . --fix",
-    "prepublish": "license-reporter report --silent",
     "openshift": "nodeshift --dockerImage=registry.access.redhat.com/ubi8/nodejs-14",
-    "postinstall": "license-reporter report --silent && license-reporter save --xml licenses.xml --silent",
     "start": "node ."
   },
   "main": "./bin/www",
@@ -21,8 +19,7 @@
     "package.json",
     "LICENSE",
     "app.js",
-    "bin",
-    "licenses"
+    "bin"
   ],
   "bugs": {
     "url": "https://github.com/nodeshift-starters/nodejs-cache/issues"
@@ -31,12 +28,8 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-semistandard": "^16.0.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "mocha": "^9.1.1",
-    "nodeshift": "~8.4.0",
+    "mocha": "^9.1.3",
+    "nodeshift": "~8.6.0",
     "nyc": "~15.1.0",
     "proxyquire": "~2.1.3",
     "supertest": "~6.1.6"
@@ -46,7 +39,6 @@
     "body-parser": "~1.19.0",
     "cors": "~2.8.4",
     "express": "~4.17.1",
-    "license-reporter": "^1.4.0",
     "project-name-generator": "~2.1.7"
   }
 }

@@ -48,8 +48,6 @@ const cacheKey = 'cute-name';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/', express.static(path.join(__dirname, 'public')));
-// Expose the license.html at http[s]://[host]:[port]/licences/licenses.html
-app.use('/licenses', express.static(path.join(__dirname, 'licenses')));
 
 async function getCached (client) {
   return client.get(cacheKey);

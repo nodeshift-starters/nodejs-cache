@@ -52,7 +52,4 @@ app.get('/api/name', async (request, response) => {
   response.send(generator().spaced);
 });
 
-// Expose the license.html at http[s]://[host]:[port]/licences/licenses.html
-app.use('/licenses', express.static(path.join(__dirname, 'licenses')));
-
 module.exports = app;
