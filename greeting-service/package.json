@@ -8,7 +8,7 @@
     "test": "mocha",
     "lint:fix": "eslint . --fix",
     "start": "node .",
-    "openshift": "nodeshift --dockerImage=registry.access.redhat.com/ubi8/nodejs-14"
+    "openshift": "nodeshift --dockerImage=registry.access.redhat.com/ubi8/nodejs-16"
   },
   "main": "./bin/www",
   "repository": {
