@@ -17,7 +17,6 @@
  */
 'use strict';
 
-const path = require('path');
 const { promisify } = require('util');
 
 const express = require('express');
