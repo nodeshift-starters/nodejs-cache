@@ -17,6 +17,8 @@
  */
 'use strict';
 
+require('./tracing.js');
+
 const { promisify } = require('util');
 
 const express = require('express');

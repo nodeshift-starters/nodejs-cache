@@ -19,6 +19,8 @@
  */
 const path = require('path');
 
+require('./tracing.js');
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const infinispan = require('infinispan');
