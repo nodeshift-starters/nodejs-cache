@@ -51,17 +51,14 @@ const exporter = new JaegerExporter({
 
 7. Deploy the example to OpenShift local
 
-* Uncomment the `require('./tracing.js');` on `cute-name-service/app.js`
-* Uncomment the `require('./tracing.js');` on `greeting-service/app.js`
-
 ```
 oc apply -f service.cache.yml
 cd greeting-service
 npm install
-npm run openshift
+npm run openshift:enable:trace
 cd ../cute-name-service
 npm install
-npm run openshift
+npm run openshift:enable:trace
 ```
 
 8. When you login on Jaeger UI you can see the result like this:
