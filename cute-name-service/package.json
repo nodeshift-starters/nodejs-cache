@@ -28,13 +28,13 @@
   },
   "homepage": "https://github.com/nodeshift-starters/nodejs-cache",
   "devDependencies": {
-    "eslint": "^8.23.0",
+    "eslint": "^9.1.0",
     "eslint-config-semistandard": "^17.0.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
-    "mocha": "^10.1.0",
+    "mocha": "^11.0.1",
     "nodeshift": "~8.7.0",
     "nyc": "~15.1.0",
     "supertest": "~6.2.4"
